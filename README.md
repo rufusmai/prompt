@@ -9,7 +9,7 @@ The whole project will get updated with new designs and components over time.
 
 ## Get via package manager
 
-Composer: `composer install prompt`  
+Composer: `composer install rufusmaiwald/prompt`  
 NPM: `npm install prompt-css`  
 Yarn: `yarn add prompt-css@1.0`  
 
