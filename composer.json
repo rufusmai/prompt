@@ -1,0 +1,26 @@
+{
+    "name": "rufusmaiwald/prompt",
+    "description": "A CSS Framework based on Bootstrap 4",
+    "keywords": [
+        "css",
+        "js",
+        "sass",
+        "mobile-first",
+        "responsive",
+        "front-end",
+        "framework",
+        "web",
+        "bootstrap"
+    ],
+    "homepage": "https://prompt.rufusmaiwald.de/",
+    "authors": [
+        {
+            "name": "Rufus Maiwald",
+            "email": "mail@rufusmaiwald.de"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/rufusmaiwald/prompt/issues"
+    },
+    "license": "MIT"
+}

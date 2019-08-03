@@ -10,8 +10,8 @@ The whole project will get updated with new designs and components over time.
 ## Get via package manager
 
 Composer: `composer install prompt`  
-NPM: `npm install prompt`
-Yarn: `yarn add prompt@1.0`  
+NPM: `npm install prompt-css`  
+Yarn: `yarn add prompt-css@1.0`  
 
 ## Direct Download
 
