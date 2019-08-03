@@ -1,0 +1,43 @@
+.header-container {
+  @include media-breakpoint-down(md) {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 11rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.header-info-card {
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.header-info-card-body {
+  background-color: rgba(55, 55, 55, 0.70);
+  border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0 !important;
+}
+
+.header-info-card-footer {
+  background-color: rgba(255,255,255,0.70);
+  border-radius: 0 0 calc(0.375rem - 1px) calc(0.375rem - 1px) !important;
+}
+
+.header-logo {
+  height: 200px;
+  width: 200px;
+
+  margin-bottom: 30px;
+}
+
+.header-title {
+  font-size: 88;
+}
+

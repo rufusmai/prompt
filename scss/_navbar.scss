@@ -1,0 +1,91 @@
+.scrolled-dark {
+  background-color: transparent !important;
+  transition: 200ms ease;
+
+  &.scrolled {
+    background-color: $dark !important;
+    box-shadow: $box-shadow;
+
+    > .container {
+      > .server-badge-group > .input-group {
+        > .input-group-prepend > .server-badge-label {
+          background-color: $gray-600 !important;
+          transition: 200ms ease;
+        }
+        > .server-badge {
+          background-color: $gray-700 !important;
+          color: white !important;
+          transition: 200ms ease;
+        }
+        > .input-group-append > .server-badge-icon {
+          background-color: $gray-700 !important;
+          color: white !important;
+          transition: 200ms ease;
+        }
+      }
+      > .social-icon {
+        background-color: $gray-700 !important;
+      }
+    }
+  }
+
+  > .container {
+    > .server-badge-group > .input-group {
+      > .input-group-prepend > .server-badge-label {
+        background-color: $gray-200 !important;
+        transition: 200ms ease;
+      }
+      > .server-badge {
+        background-color: white !important;
+        color: black !important;
+        transition: 200ms ease;
+      }
+      > .input-group-append > .server-badge-icon {
+        background-color: white !important;
+        color: black !important;
+        transition: 200ms ease;
+      }
+    }
+    > .social-icon {
+      background-color: transparent !important;
+      transition: 200ms ease;
+    }
+  }
+}
+
+
+
+.social-icon {
+  background-color: $gray-700;
+  padding: 10px;
+  color: white;
+
+  &:hover {
+    color: $gray-300;
+  }
+}
+
+.server-badge-group {
+  position: relative;
+}
+
+.server-badge-label {
+  background-color: $gray-600 !important;
+}
+
+.server-badge {
+  background-color: $gray-700 !important;
+  height: 39px;
+  border: none;
+  outline: none;
+
+  &.code {
+    font-family: $font-family-monospace;
+  }
+}
+
+.server-badge-icon {
+  background-color: $gray-700 !important;
+  padding-left: 2px;
+  cursor: pointer !important;
+}

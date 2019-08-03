@@ -1,0 +1,178 @@
+.btn-c {
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 12px 20px;
+
+  background: grey;
+  border: none;
+  border-radius: $border-radius;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: inherit;
+  color: white;
+
+  cursor: pointer;
+
+  transition: box-shadow 0.5s;
+
+  &.black {
+    background: black;
+    color: white;
+    &:focus {
+      box-shadow: 0 0 0 4px lighten(black, 25%);
+    }
+  }
+  &.red {
+    background: $red;
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($red, 25%);
+    }
+  }
+  &.green {
+    background: $green;
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($green, 25%);
+    }
+  }
+  &.blue {
+    background: $blue;
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($blue, 25%);
+    }
+  }
+  &.yellow {
+    background: $yellow;
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($yellow, 25%);
+    }
+  }
+
+  &.round {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+
+    &.big {
+      height: 75px;
+      width: 75px;
+
+      font-size: 1em;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 5px 15px #b7b7b7;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px lighten(grey, 25%);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn-c-outline {
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 13px 30px;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid grey;
+  border-radius: $border-radius;
+
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: inherit;
+  color: grey;
+
+  cursor: pointer;
+
+  transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+
+  &.black {
+    border-color: black;
+    color: black;
+
+    &:hover,
+    &:focus {
+      background: black;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px lighten(black, 25%);
+    }
+  }
+  &.red {
+    border-color: $red;
+    color: $red;
+
+    &:hover,
+    &:focus {
+      background: $red;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($red, 25%);
+    }
+  }
+  &.green {
+    border-color: $green;
+    color: $green;
+
+    &:hover,
+    &:focus {
+      background: $green;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($green, 25%);
+    }
+  }
+  &.blue {
+    border-color: $blue;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      background: $blue;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($blue, 25%);
+    }
+  }
+  &.yellow {
+    border-color: $yellow;
+    color: $yellow;
+
+    &:hover,
+    &:focus {
+      background: $yellow;
+    }
+    &:focus {
+      box-shadow: 0 0 0 4px lighten($yellow, 25%);
+    }
+  }
+
+  &.round {
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 5px 15px #b7b7b7;
+    background: grey;
+    color: white;
+    outline: none;
+  }
+  &:focus {
+    box-shadow: 0 0 0 4px lighten(grey, 25%);
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

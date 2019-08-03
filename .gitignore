@@ -1,0 +1,10 @@
+# IDE
+.idea/
+.sass-cache/
+
+# NodeJS
+node_modules/
+public/
+
+# Folders
+docs/local/

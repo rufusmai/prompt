@@ -1,0 +1,130 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Prompt - CSS Framework based on Bootstrap 4</title>
+
+        <link rel="stylesheet" href="https://gitcdn.link/repo/rufusmaiwald/prompt/master/dist/prompt.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+        <script src="https://kit.fontawesome.com/b08dd53d95.js"></script>
+        <style>
+            .header-wrapper {
+                background: rgba(135, 67, 64, 0.61);
+                padding-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="navbar-main" class="p-3 px-md-4 mb-3 scrolled-dark fixed-top">
+            <div class="d-flex flex-column flex-md-row align-items-center container">
+                <a class="my-0 d-flex mr-md-auto mr-0 navbar-brand text-light" href="index.html">
+                    <div class="text">
+                        Prompt
+                    </div>
+                </a>
+                <nav class="my-2 my-md-0 mr-md-2">
+                    <a class="p-2 text-light" href="components.html">Components</a>
+                </nav>
+                <a class="social-icon d-none d-md-inline-block mr-3" href="https://github.com/rufusmaiwald/prompt"
+                   target="_blank" data-toggle="tooltip" data-trigger="hover" data-placement="bottom"
+                   title="View on Github"><i class="fab fa-github"></i></a>
+                <a id="btn-login" class="btn btn-secondary btn-light"
+                   href="https://github.com/rufusmaiwald/prompt/archive/master.zip">Download</a>
+            </div>
+        </div>
+        <div class="header-wrapper d-flex justify-content-center align-items-center">
+            <div class="container header-container d-flex flex-wrap align-items-center justify-content-center">
+                <div class="d-none d-lg-block mr-lg-auto text-center">
+                    <h1 class="text-light header-title font-weight-bold">Prompt</h1>
+                    <h2>
+                        <small class="text-dark">Just another CSS Framework</small>
+                    </h2>
+                </div>
+                <div class="mt-5 mt-lg-0 text-center card header-info-card bg-transparent border-0 shadow">
+                    <div class="card-body p-4 header-info-card-body text-light">
+                        Prompt is a CSS Design Framework based on Bootstrap 4.
+                    </div>
+                    <div class="card-footer header-info-card-footer p-4 align-items-start">
+                        Made with <span class="text-danger">&hearts;</span> by <a href="https://rufusmaiwald.de"
+                                                                                  target="_blank">Rufus Maiwald</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wrapper">
+            <section id="blog">
+                <div class="container">
+                    <div class="section-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                        <h1 class="display-4">Get Started</h1>
+                        <p class="lead">Integrating Prompt in your web project is easy!</p>
+                    </div>
+
+                    <div class="row mb-2 text-center">
+                        <div class="col-md-6">
+                            <div class="card p-4 m-3">
+                                <h3>Get from package Manager</h3>
+                                <br>
+
+                                Composer: <code>npm install prompt</code>
+                                <br>
+                                NPM: <code>composer install prompt</code>
+                                <br>
+                                Yarn: <code>yarn add prompt@1.0</code>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card p-4 m-3">
+                                <h3>Direct download</h3>
+                                <br>
+
+                                <p>
+                                    Download full Github Repository<br>
+                                    Use <code style="display: contents">dist/prompt.css</code> as compiled version
+                                </p>
+
+                                <a class="btn btn-outline-secondary"
+                                   href="https://github.com/rufusmaiwald/prompt/archive/master.zip">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="container">
+                <footer class="pt-4 my-md-5 pt-md-5 border-top">
+                    <div class="text-center text-muted">
+                        Made with &hearts; by <a href="https://rufusmaiwald.de" target="_blank"><span
+                            class="text-muted">Rufus Maiwald</span></a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            var nav = document.getElementById('navbar-main');
+            var btn = document.getElementById('btn-login');
+            $(window).scroll(function () {
+                let pixels = window.innerWidth > 767.98 ? 120 : 20;
+
+                window.pageYOffset > pixels ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+                window.pageYOffset > pixels ? btn.classList.remove('btn-light') : btn.classList.add('btn-light');
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+body {
+  width: 100%;
+
+}
+
+.row-space {
+  margin-bottom: 1.4rem;
+}
+.h1-bewerben {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  margin: 90px 0px 30px 0px;
+}
+
+
+.icon-apply {
+  text-align: center;
+  margin: 1rem;
+}
+
+li {
+  padding: 2px;
+}
+
+.footer-background {
+  background-color: white;
+  width: 100%;
+}
+
+.content-apply {
+  background-image: url("../docs/img/apply-2.png");
+  background-size: cover;
+  padding: 50px;
+}
+
+.row-unten {
+  margin-bottom: 40px;
+}
+
+.apply-form-content {
+  margin: 20px;
+}
+
+.applypage {
+  width: 1140px;
+  margin: auto;
+}
+
+[role="main"] {
+  padding-top: 133px; /* Space for fixed navbar */
+}
+
+@media (min-width: 768px) {
+  [role="main"] {
+    padding-top: 48px; /* Space for fixed navbar */
+  }
+}
+
+.dashbord-body {
+  font-size: .875rem;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+.ban {
+  height: 100%;
+}
+
+.dashboard-container .row {
+}
+
+.border-left-primary {
+  border-left: 2px solid $primary !important;
+}
+
+.border-left-secondary {
+  border-left: 2px solid $secondary !important;
+}
+
+.border-left-success {
+  border-left: 2px solid $success !important;
+}
+
+.border-left-danger {
+  border-left: 2px solid $danger !important;
+}
+
+.border-left-warning {
+  border-left: 2px solid $warning !important;
+}
+
+.border-left-dark {
+  border-left: 2px solid $dark !important;
+}
+
+.border-left-light {
+  border-left: 2px solid $light !important;
+}
+
+.border-left-info {
+  border-left: 2px solid $info !important;
+}
+
+.dash-cards {
+  margin-bottom: 2rem;
+}
+
+.dashboard-bar-text {
+  margin-left: 5px;
+  color: #1d2124;
+}

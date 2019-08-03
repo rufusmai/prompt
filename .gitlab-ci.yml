@@ -1,0 +1,11 @@
+pages:
+  script:
+    - mkdir .public
+    - cp -r $CI_PROJECT_DIR/docs/* .public
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+  stage: deploy
