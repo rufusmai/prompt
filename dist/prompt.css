@@ -9836,7 +9836,7 @@ li {
 }
 
 .header-title {
-  font-size: 88;
+  font-size: 88px;
 }
 
 .scrolled-dark {
@@ -9866,7 +9866,7 @@ li {
   transition: 200ms ease;
 }
 
-.scrolled-dark.scrolled > .container > .social-icon {
+.scrolled-dark.scrolled > .container > .social-iconbar-icon {
   background-color: #495057 !important;
 }
 
@@ -9887,18 +9887,18 @@ li {
   transition: 200ms ease;
 }
 
-.scrolled-dark > .container > .social-icon {
+.scrolled-dark > .container > .social-iconbar-icon {
   background-color: transparent !important;
   transition: 200ms ease;
 }
 
-.social-icon {
+.social-iconbar-icon {
   background-color: #495057;
   padding: 10px;
   color: white;
 }
 
-.social-icon:hover {
+.social-iconbar-icon:hover {
   color: #dee2e6;
 }
 

@@ -1,5 +1,7 @@
 # Prompt - CSS Framework based on Bootstrap 4
 
+Homepage: [https://prompt.rufusmaiwald.de/](https://prompt.rufusmaiwald.de/)
+
 Prompt aims to improve the default look of Bootstrap buttons & inputs
 and makes it look more modern. 
 Additionally new sections like headers are added with own components. 

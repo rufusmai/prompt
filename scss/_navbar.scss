@@ -23,7 +23,7 @@
           transition: 200ms ease;
         }
       }
-      > .social-icon {
+      > .social-iconbar-icon {
         background-color: $gray-700 !important;
       }
     }
@@ -46,7 +46,7 @@
         transition: 200ms ease;
       }
     }
-    > .social-icon {
+    > .social-iconbar-icon {
       background-color: transparent !important;
       transition: 200ms ease;
     }
@@ -55,7 +55,7 @@
 
 
 
-.social-icon {
+.social-iconbar-icon {
   background-color: $gray-700;
   padding: 10px;
   color: white;
