@@ -6,7 +6,7 @@
     background-color: $dark !important;
     box-shadow: $box-shadow;
 
-    > .container {
+    > .container, > .container > .navbar-collapse > .navbar-nav {
       > .server-badge-group > .input-group {
         > .input-group-prepend > .server-badge-label {
           background-color: $gray-600 !important;
@@ -23,13 +23,13 @@
           transition: 200ms ease;
         }
       }
-      > .social-iconbar-icon {
+      > .nav-item > .social-iconbar-icon {
         background-color: $gray-700 !important;
       }
     }
   }
 
-  > .container {
+  > .container, > .container > .navbar-collapse > .navbar-nav {
     > .server-badge-group > .input-group {
       > .input-group-prepend > .server-badge-label {
         background-color: $gray-200 !important;
@@ -46,22 +46,26 @@
         transition: 200ms ease;
       }
     }
-    > .social-iconbar-icon {
+    > .nav-item > .social-iconbar-icon {
       background-color: transparent !important;
       transition: 200ms ease;
     }
   }
 }
 
-
-
 .social-iconbar-icon {
   background-color: $gray-700;
   padding: 10px;
   color: white;
+  display: inline-block;
+  height: 100%;
 
   &:hover {
     color: $gray-300;
+  }
+
+  > i {
+    margin-top: 2px;
   }
 }
 

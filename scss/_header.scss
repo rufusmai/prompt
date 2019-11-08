@@ -18,6 +18,7 @@
 .header-info-card {
   max-width: 400px;
   min-width: 300px;
+  backdrop-filter: blur(7px);
 }
 
 .header-info-card-body {

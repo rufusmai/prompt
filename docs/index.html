@@ -5,7 +5,8 @@
 
         <title>Prompt - CSS Framework based on Bootstrap 4</title>
 
-        <link rel="stylesheet" href="https://rawcdn.githack.com/rufusmaiwald/prompt/f965af6dba735a7ef978d3ff271fcbfa01bea943/dist/prompt.min.css">
+        <link rel="stylesheet" href="../dist/prompt.css">
+        <!--<link rel="stylesheet" href="https://rawcdn.githack.com/rufusmaiwald/prompt/f965af6dba735a7ef978d3ff271fcbfa01bea943/dist/prompt.min.css">-->
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
         <script src="https://kit.fontawesome.com/b08dd53d95.js"></script>
@@ -17,23 +18,38 @@
         </style>
     </head>
     <body>
-        <div id="navbar-main" class="p-3 px-md-4 mb-3 scrolled-dark fixed-top">
-            <div class="d-flex flex-column flex-md-row align-items-center container">
-                <a class="my-0 d-flex mr-md-auto mr-0 navbar-brand text-light" href="index.html">
+        <nav id="navbar-main"
+             class="navbar navbar navbar-expand-lg navbar-dark bg-dark scrolled-dark fixed-top navbar-light navbar-expand-md">
+            <div class="container py-1">
+                <a href="/" class="my-0 d-flex mr-md-auto navbar-brand text-light router-link-exact-active router-link-active">
                     <div class="text">
                         Prompt
                     </div>
                 </a>
-                <nav class="my-2 my-md-0 mr-md-2">
-                    <a class="p-2 text-light" href="components.html">Components</a>
-                </nav>
-                <a class="social-iconbar-icon d-none d-md-inline-block mr-3" href="https://github.com/rufusmaiwald/prompt"
-                   target="_blank" data-toggle="tooltip" data-trigger="hover" data-placement="bottom"
-                   title="View on Github"><i class="fab fa-github"></i></a>
-                <a id="btn-login" class="btn btn-secondary btn-light"
-                   href="https://github.com/rufusmaiwald/prompt/archive/master.zip">Download</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-collapse"
+                        aria-controls="nav-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="nav-collapse" class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="p-0">
+                            <a href="/components.html" class="p-2 text-light d-inline-block">Components</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block px-1">
+                            <a href="ts3server://ts.mcone.eu" class="social-iconbar-icon" data-toggle="tooltip" data-trigger="hover" data-placement="bottom"
+                               title="View on Github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item d-inline-block">
+                            <a id="btn-login" class="btn btn btn-secondary btn-light btn-secondary"
+                                    href="https://github.com/rufusmaiwald/prompt/archive/master.zip" title="">Anmelden
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
         <div class="header-wrapper d-flex justify-content-center align-items-center">
             <div class="container header-container d-flex flex-wrap align-items-center justify-content-center">
                 <div class="d-none d-lg-block mr-lg-auto text-center">
