@@ -8,3 +8,14 @@ $input-btn-padding-y: .5em;
 $input-btn-padding-x: 1.25rem;
 
 $border-width: 2px;
+
+$input-btn-padding-y: .375rem;
+$input-btn-padding-x: .75rem;
+
+$input-padding-y: $input-btn-padding-y;
+$input-padding-x: $input-btn-padding-x;
+
+$custom-select-padding-y: $input-padding-y;
+$custom-select-padding-x: $input-padding-x;
+$custom-select-indicator-padding: 1rem;
+$custom-select-feedback-icon-padding-right: add(1rem * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
