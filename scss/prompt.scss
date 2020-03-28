@@ -1,7 +1,3 @@
-//$enable-shadows: true;
-
-@import "../node_modules/bootstrap/scss/bootstrap";
-
 /*!
 
 =========================================================
@@ -20,12 +16,5 @@
 
 */
 
-@import "variables";
-@import "mixins";
-@import "button";
-@import "card";
-@import "general";
-@import "header";
-@import "input";
-@import "navbar";
-@import "section";
+@import "overrides/promt-overrides";
+@import "components/prompt-components";

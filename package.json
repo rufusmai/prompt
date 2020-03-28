@@ -17,7 +17,7 @@
     "author": "Rufus Maiwald",
     "scripts": {
         "css": "npm-run-all css-compile css-minify",
-        "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/",
+        "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/prompt.scss -o dist/",
         "css-lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
         "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/prompt.min.css dist/prompt.css"
     },

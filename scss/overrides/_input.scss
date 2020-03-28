@@ -1,0 +1,16 @@
+input:not([type="radio"]):not([type="checkbox"]):not([type="range"]):not([type="file"]),
+textarea {
+  &:hover:not(.disabled):not(:disabled):not(:read-only):not(:focus) {
+    box-shadow: 0 4px 12px rgba($secondary, .1);
+
+    &.is-valid,
+    &:valid {
+      box-shadow: 0 4px 12px rgba($success, .1);
+    }
+
+    &.is-invalid,
+    &:invalid {
+      box-shadow: 0 4px 12px rgba($danger, .1);
+    }
+  }
+}
