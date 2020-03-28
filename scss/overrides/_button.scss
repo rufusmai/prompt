@@ -50,7 +50,7 @@
   color: $color;
   border-color: $color;
 
-  @include hover {
+  &:hover:not(:disabled):not(.disabled) {
     color: $color-hover;
     background-color: $color;
     border-color: $color;
