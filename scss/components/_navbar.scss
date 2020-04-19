@@ -9,41 +9,22 @@
     > .container, > .container > .navbar-collapse > .navbar-nav {
       > .server-badge-group > .input-group {
         > .input-group-prepend > .server-badge-label {
-          @if $color-scheme == dark {
-            background-color: $gray-400 !important;
-          } @else {
-            background-color: $gray-600 !important;
-          }
-
+          background-color: $nav-server-badge-group-prepend-bg !important;
           transition: 200ms ease;
         }
         > .server-badge {
-          @if $color-scheme == dark {
-            background-color: $gray-300 !important;
-          } @else {
-            background-color: $gray-700 !important;
-          }
-
+          background-color: $nav-server-badge-group-bg !important;
           color: white !important;
           transition: 200ms ease;
         }
         > .input-group-append > .server-badge-icon {
-          @if $color-scheme == dark {
-            background-color: $gray-300 !important;
-          } @else {
-            background-color: $gray-700 !important;
-          }
-
+          background-color: $nav-server-badge-group-bg !important;
           color: white !important;
           transition: 200ms ease;
         }
       }
       > .nav-item > .social-iconbar-icon {
-        @if $color-scheme == dark {
-          background-color: $gray-300 !important;
-        } @else {
-          background-color: $gray-700 !important;
-        }
+        background-color: $nav-server-badge-group-bg !important;
       }
     }
   }
@@ -51,12 +32,7 @@
   > .container, > .container > .navbar-collapse > .navbar-nav {
     > .server-badge-group > .input-group {
       > .input-group-prepend > .server-badge-label {
-        @if $color-scheme == dark {
-          background-color: $gray-800 !important;
-        } @else {
-          background-color: $gray-200 !important;
-        }
-
+        background-color: $nav-server-badge-group-label-bg !important;
         transition: 200ms ease;
       }
       > .server-badge {
@@ -78,23 +54,14 @@
 }
 
 .social-iconbar-icon {
-  @if $color-scheme == dark {
-    background-color: $gray-300;
-  } @else {
-    background-color: $gray-700;
-  }
-
+  background-color: $nav-social-icon-bg;
   padding: 10px;
   color: white;
   display: inline-block;
   height: 100%;
 
   &:hover {
-    @if $color-scheme == dark {
-      color: $gray-700;
-    } @else {
-      color: $gray-300;
-    }
+    color: $nav-social-icon-color-hover;
   }
 
   > i {
@@ -107,19 +74,11 @@
 }
 
 .server-badge-label {
-  @if $color-scheme == dark {
-    background-color: $gray-400 !important;
-  } @else {
-    background-color: $gray-600 !important;
-  }
+  background-color: $nav-server-badge-group-prepend-bg !important;
 }
 
 .server-badge {
-  @if $color-scheme == dark {
-    background-color: $gray-300 !important;
-  } @else {
-    background-color: $gray-700 !important;
-  }
+  background-color: $nav-server-badge-group-bg !important;
 
   height: 39px;
   border: none;
@@ -131,11 +90,7 @@
 }
 
 .server-badge-icon {
-  @if $color-scheme == dark {
-    background-color: $gray-300 !important;
-  } @else {
-    background-color: $gray-700 !important;
-  }
+  background-color: $nav-server-badge-group-bg !important;
 
   padding-left: 2px;
   cursor: pointer !important;
