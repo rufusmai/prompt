@@ -19,3 +19,60 @@ $custom-select-padding-y: $input-padding-y !default;
 $custom-select-padding-x: $input-padding-x !default;
 $custom-select-indicator-padding: 1rem !default;
 $custom-select-feedback-icon-padding-right: add(1rem * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
+
+$custom-checkbox-indicator-border-radius: .25rem !default;
+
+$box-shadow-sm: 0 .125rem .25rem rgba($main, .075) !default;
+$box-shadow: 0 .5rem 1rem rgba($main, .15) !default;
+$box-shadow-lg: 0 1rem 3rem rgba($main, .175) !default;
+
+$component-active-color: $white;
+
+$table-accent-bg: rgba($main, .05) !default;
+$table-hover-bg: rgba($main, .075) !default;
+$table-dark-accent-bg: rgba($inverted, .05) !default;
+$table-dark-hover-bg: rgba($inverted, .075) !default;
+$table-dark-color: $main;
+
+$custom-range-track-box-shadow: inset 0 .25rem .25rem rgba($inverted, .1) !default;
+$custom-range-thumb-box-shadow: 0 .1rem .25rem rgba($inverted, .1) !default;
+
+$dropdown-bg: $inverted !default;
+$dropdown-border-color: rgba($main, .15) !default;
+
+$pagination-bg: $inverted !default;
+$pagination-disabled-bg: $inverted !default;
+
+$card-border-color: rgba($main, .125) !default;
+$card-cap-bg: rgba($main, .03) !default;
+$card-bg: $inverted !default;
+
+$tooltip-color: $inverted !default;
+$tooltip-bg: $main !default;
+
+$popover-border-color: rgba($main, .2) !default;
+$popover-box-shadow: 0 .25rem .5rem rgba($main, .2) !default;
+
+$toast-background-color: rgba($inverted, .85) !default;
+$toast-border-color: rgba($main, .1) !default;
+$toast-box-shadow: 0 .25rem .75rem rgba($main, .1) !default;
+$toast-header-background-color: rgba($inverted, .85) !default;
+$toast-header-border-color: rgba($main, .05) !default;
+
+$modal-content-bg: $inverted !default;
+$modal-content-border-color: rgba($main, .2) !default;
+$modal-content-box-shadow-xs: 0 .25rem .5rem rgba($main, .5) !default;
+$modal-content-box-shadow-sm-up: 0 .5rem 1rem rgba($main, .5) !default;
+
+$progress-box-shadow: inset 0 .1rem .1rem rgba($main, .1) !default;
+$progress-bar-color: $inverted !default;
+
+$list-group-bg: $inverted !default;
+$list-group-border-color: rgba($main, .125) !default;
+
+$thumbnail-box-shadow: 0 1px 2px rgba($main, .075) !default;
+$close-color: $main !default;
+$close-text-shadow: 0 1px 0 $inverted !default;
+
+$code-color: $main-light !default;
+$kbd-color: $inverted !default;

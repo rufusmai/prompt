@@ -3,10 +3,21 @@
   overflow: hidden;
   animation: placeholderShimmer $placeholder-loading-animation-duration linear;
   animation-iteration-count: infinite;
-  background-color: $white;
+  background-color: $inverted;
   background-image: $placeholder-loading-gradient;
   background-size: $placeholder-loading-gradient-width 100%;
   max-width: $placeholder-max-width;
+}
+
+.bg-loading {
+  overflow: hidden;
+  animation: placeholderShimmer $placeholder-loading-animation-duration linear;
+  animation-iteration-count: infinite;
+  border: none;
+  color: transparent;
+  background-color: $inverted;
+  background-image: $placeholder-loading-gradient;
+  background-size: $placeholder-loading-gradient-width 100%;
 }
 
 @keyframes placeholderShimmer{
@@ -39,13 +50,20 @@
 .placeholder .image.header:after,
 .placeholder .line,
 .placeholder .line:after {
-  background-color: $white;
+  background-color: $inverted;
+}
+
+@each $color, $value in $theme-colors {
+  .placeholder.bg-#{$color},
+  .placeholder.bg-#{$color} > :before,
+  .placeholder.bg-#{$color} .image.header:after,
+  .placeholder.bg-#{$color} .line,
+  .placeholder.bg-#{$color} .line:after {
+    background-color: $value;
+  }
 }
 
 /* Image */
-.placeholder .image:not(.header) {
-  height: $placeholder-image-height;
-}
 .placeholder .square.image:not(.header) {
   height: 0;
   overflow: hidden;
@@ -138,12 +156,6 @@
 }
 .placeholder .image.header .line:before {
   width: $placeholder-image-text-indent;
-}
-.placeholder .image.header:after {
-  display: block;
-  height: $placeholder-line-margin;
-  content: '';
-  margin-left: $placeholder-image-width;
 }
 
 /* Spacing */

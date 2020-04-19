@@ -2,8 +2,8 @@
 $placeholder-max-width: 30rem !default;
 
 $placeholder-line-margin: .85rem !default;
-$placeholder-header-line-height: .65rem !default;
-$placeholder-line-height: 2rem !default;
+$placeholder-header-line-height: 1.2rem !default;
+$placeholder-line-height: 1.2rem !default;
 $placeholder-paragraph-line-height: $placeholder-line-height !default;
 
 $placeholder-spacing: 1.5rem !default;
@@ -14,9 +14,7 @@ $consecutive-placeholder-spacing: 2rem !default;
 
 $placeholder-spacing: 1.5rem !default;
 
-$placeholder-image-height: 100px !default;
-$placeholder-image-height: 100px !default;
-$placeholder-image-width: 3em !default;
+$placeholder-image-width: 3.2em !default;
 $placeholder-image-text-indent: .7rem !default;
 
 $placeholder-header-line-one-outdent: 20% !default;
@@ -32,10 +30,10 @@ $placeholder-very-short-line-outdent: 80% !default;
 $placeholder-loading-animation-duration: 2s !default;
 $placeholder-loading-gradient-width: 1200px !default;
 $placeholder-loading-gradient: linear-gradient(to right,
-        rgba(0, 0, 0, 0.08) 0%,
-        rgba(0, 0, 0, 0.15) 15%,
-        rgba(0, 0, 0, 0.08) 30%
-) !default;
+  $gray-200 0%,
+  $gray-300 15%,
+  $gray-200 30%
+);
 
 $placeholder-line-one-outdent: $placeholder-full-line-outdent !default;
 $placeholder-line-two-outdent: $placeholder-medium-line-outdent !default;

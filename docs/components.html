@@ -5,9 +5,7 @@
 
         <title>MCONE - Dein Nummer 1 Netzwerk</title>
 
-        <link rel="stylesheet"
-              href="https://rawcdn.githack.com/rufusmaiwald/prompt/7b11205/dist/prompt.min.css">
-        <!--        <link rel="stylesheet" href="https://rawcdn.githack.com/rufusmaiwald/prompt/65cbd763de58da15b13c4a32be1c71e1bfca990a/dist/prompt.min.css">-->
+        <link rel="stylesheet" id="theme" class="light" href="https://rawcdn.githack.com/rufusmaiwald/prompt/v1.4.0/dist/prompt.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
         <script src="https://kit.fontawesome.com/b08dd53d95.js"></script>
@@ -23,6 +21,10 @@
                 <nav class="my-2 my-md-0 mr-md-2">
                     <a class="p-2 text-light" href="components.html">Components</a>
                 </nav>
+
+                <a class="social-iconbar-icon d-none d-lg-inline-block mr-3"
+                   href="#" onclick="darkThemeSwitch()" data-toggle="tooltip"
+                   data-trigger="hover" data-placement="bottom" title="Change Theme"><i class="fas fa-moon"></i></a>
                 <a class="social-iconbar-icon d-none d-lg-inline-block mr-3"
                    href="https://github.com/rufusmaiwald/prompt" target="_blank" data-toggle="tooltip"
                    data-trigger="hover" data-placement="bottom" title="View on Github"><i class="fab fa-github"></i></a>
@@ -1581,5 +1583,22 @@
                 </div>
             </div>
         </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        <script type="text/javascript">
+            function _setTheme(light) {
+                let link = document.getElementById("theme");
+                link.setAttribute("href", light ? "https://rawcdn.githack.com/rufusmaiwald/prompt/v1.4.0/dist/prompt.min.css" : "https://rawcdn.githack.com/rufusmaiwald/prompt/v1.4.0/dist/prompt_dark.min.css");
+                link.setAttribute("class", light ? "light" : "dark");
+            }
+
+            function darkThemeSwitch() {
+                let link = document.getElementById("theme");
+                _setTheme(link.className === "dark");
+            }
+        </script>
     </body>
 </html>

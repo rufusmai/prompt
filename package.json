@@ -16,12 +16,12 @@
     "homepage": "https://prompt.rufusmaiwald.de/",
     "author": "Rufus Maiwald",
     "scripts": {
-        "dev": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --source-map true scss/prompt.scss --source-map-contents true --precision 6 -o dist/",
+        "dev": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --source-map true scss/ --source-map-contents true --precision 6 -o dist/",
         "watch": "chokidar \"scss/**/*.scss\" -c \"npm run dev\"",
         "prod": "npm-run-all css-compile css-minify",
-        "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/prompt.scss -o dist/",
+        "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --recursive false scss/ -o dist/",
         "css-lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
-        "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/prompt.min.css dist/prompt.css"
+        "css-minify": "cleancss --level 2 --format breakWith=lf --source-map --source-map-inline-sources -o dist/prompt.min.css dist/prompt.css && cleancss --level 2 --format breakWith=lf --source-map --source-map-inline-sources -o dist/prompt_dark.min.css dist/prompt_dark.css"
     },
     "repository": {
         "type": "git",

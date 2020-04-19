@@ -5,8 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import "../../node_modules/bootstrap/scss/functions";
-
 //Overriding bootstrap variables
 @import "variables";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -51,4 +49,5 @@
 @import "../../node_modules/bootstrap/scss/print";
 
 @import "button-group";
+@import "navbar";
 @import "input";

@@ -9,22 +9,41 @@
     > .container, > .container > .navbar-collapse > .navbar-nav {
       > .server-badge-group > .input-group {
         > .input-group-prepend > .server-badge-label {
-          background-color: $gray-600 !important;
+          @if $color-scheme == dark {
+            background-color: $gray-400 !important;
+          } @else {
+            background-color: $gray-600 !important;
+          }
+
           transition: 200ms ease;
         }
         > .server-badge {
-          background-color: $gray-700 !important;
+          @if $color-scheme == dark {
+            background-color: $gray-300 !important;
+          } @else {
+            background-color: $gray-700 !important;
+          }
+
           color: white !important;
           transition: 200ms ease;
         }
         > .input-group-append > .server-badge-icon {
-          background-color: $gray-700 !important;
+          @if $color-scheme == dark {
+            background-color: $gray-300 !important;
+          } @else {
+            background-color: $gray-700 !important;
+          }
+
           color: white !important;
           transition: 200ms ease;
         }
       }
       > .nav-item > .social-iconbar-icon {
-        background-color: $gray-700 !important;
+        @if $color-scheme == dark {
+          background-color: $gray-300 !important;
+        } @else {
+          background-color: $gray-700 !important;
+        }
       }
     }
   }
@@ -32,7 +51,12 @@
   > .container, > .container > .navbar-collapse > .navbar-nav {
     > .server-badge-group > .input-group {
       > .input-group-prepend > .server-badge-label {
-        background-color: $gray-200 !important;
+        @if $color-scheme == dark {
+          background-color: $gray-800 !important;
+        } @else {
+          background-color: $gray-200 !important;
+        }
+
         transition: 200ms ease;
       }
       > .server-badge {
@@ -54,14 +78,23 @@
 }
 
 .social-iconbar-icon {
-  background-color: $gray-700;
+  @if $color-scheme == dark {
+    background-color: $gray-300;
+  } @else {
+    background-color: $gray-700;
+  }
+
   padding: 10px;
   color: white;
   display: inline-block;
   height: 100%;
 
   &:hover {
-    color: $gray-300;
+    @if $color-scheme == dark {
+      color: $gray-700;
+    } @else {
+      color: $gray-300;
+    }
   }
 
   > i {
@@ -74,11 +107,20 @@
 }
 
 .server-badge-label {
-  background-color: $gray-600 !important;
+  @if $color-scheme == dark {
+    background-color: $gray-400 !important;
+  } @else {
+    background-color: $gray-600 !important;
+  }
 }
 
 .server-badge {
-  background-color: $gray-700 !important;
+  @if $color-scheme == dark {
+    background-color: $gray-300 !important;
+  } @else {
+    background-color: $gray-700 !important;
+  }
+
   height: 39px;
   border: none;
   outline: none;
@@ -89,7 +131,12 @@
 }
 
 .server-badge-icon {
-  background-color: $gray-700 !important;
+  @if $color-scheme == dark {
+    background-color: $gray-300 !important;
+  } @else {
+    background-color: $gray-700 !important;
+  }
+
   padding-left: 2px;
   cursor: pointer !important;
 }
