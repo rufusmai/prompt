@@ -1,0 +1,110 @@
+@mixin button-variant(
+  $background-variant,
+  $border,
+  $color: if(
+    ($background-variant != $dark and $background-variant != $light and $background-variant != $main and $background-variant != $inverted),
+    if(($color-scheme == light), darken($background-variant, 20%), lighten($background-variant, 30%)),
+    color-yiq($background-variant)
+  ),
+  $background: if(
+    ($background-variant != $dark and $background-variant != $light and $background-variant != $main and $background-variant != $inverted),
+    if(($color-scheme == light), lighten($background-variant, 37.5%), darken($background-variant, 25%)),
+    $background-variant
+  ),
+  $hover-background: if(
+    ($background-variant != $black and $color-scheme == light),
+    darken($background, 5%),
+    lighten($background, 5%)
+  ),
+  $active-background: if(($color-scheme == light), darken($background, 15%), lighten($background, 15%))
+) {
+  color: $color;
+  background-color: $background;
+
+  &:hover:not(:disabled):not(.disabled):not(.active):not(:active) {
+    background-color: $hover-background;
+    color: $color;
+  }
+
+  &:focus,
+  &.focus {
+    background-color: $hover-background;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: rgba($color, 0.5);
+    background-color: $background;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: if(($color-scheme == light), darken($color, 20%), lighten($color, 20%));
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+  }
+}
+
+@mixin button-outline-variant(
+  $background-variant,
+  $hover-background: if(
+    ($color-scheme == light),
+    lighten($background-variant, 7.5%),
+    darken($background-variant, 7.5%)
+  ),
+  $active-background: if(
+    ($color-scheme == light),
+    darken($background-variant, 2.5%),
+    lighten($background-variant, 2.5%)
+  )
+) {
+  color: color-yiq($background-variant);
+  background-color: $background-variant;
+
+  &:hover:not(:disabled):not(.disabled):not(.active):not(:active) {
+    background-color: $hover-background;
+    color: color-yiq($hover-background);
+  }
+
+  &:focus,
+  &.focus {
+    background-color: $hover-background;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    color: rgba(color-yiq($background-variant), 0.5);
+    background-color: $background-variant;
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
+      background-image: none;
+    }
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: color-yiq($background-variant);
+    background-color: $active-background;
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
+    }
+  }
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  @include font-size($font-size);
+  line-height: $line-height;
+  // Manually declare to provide an override to the browser default
+  @include border-radius($border-radius, 0);
+}

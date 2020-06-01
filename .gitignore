@@ -5,6 +5,7 @@
 # NodeJS
 node_modules/
 public/
+docs_dist/
 
 # Folders
 local/

@@ -2,28 +2,4 @@
 .btn-group-vertical {
   @include transition($btn-transition);
   border-radius: $border-radius;
-
-  @include hover {
-    box-shadow: 0 4px 12px rgba($gray-500, .5);
-
-    @each $name, $color in $theme-colors {
-      &.btn-group-#{$name} {
-        box-shadow: 0 4px 12px rgba($color, .5);
-      }
-    }
-  }
-
-  > .btn {
-    &:hover:not(:focus):not(.active):not(:active) {
-      box-shadow: none !important;
-    }
-  }
-}
-
-.btn-group-sm {
-  border-radius: $border-radius-sm;
-}
-
-.btn-group-lg {
-  border-radius: $border-radius-lg;
 }

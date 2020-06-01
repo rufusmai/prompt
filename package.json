@@ -2,7 +2,6 @@
     "name": "prompt-css",
     "description": "A CSS Framework based on Bootstrap 4",
     "version": "1.4.1",
-    "version_short": "1.0",
     "keywords": [
         "css",
         "sass",
@@ -16,12 +15,15 @@
     "homepage": "https://prompt.rufusmaiwald.de/",
     "author": "Rufus Maiwald",
     "scripts": {
-        "dev": "node-sass --importer node_modules/node-sass-package-importer/dist/cli.js --source-map true scss/ --source-map-contents true --precision 6 -o dist/",
-        "watch": "chokidar \"scss/**/*.scss\" -c \"npm run dev\"",
-        "prod": "npm-run-all css-compile css-minify",
-        "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 --recursive false scss/ -o dist/",
-        "css-lint": "stylelint \"scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
-        "css-minify": "cleancss --level 2 --format breakWith=lf --source-map --source-map-inline-sources -o dist/prompt.min.css dist/prompt.css && cleancss --level 2 --format breakWith=lf --source-map --source-map-inline-sources -o dist/prompt_dark.min.css dist/prompt_dark.css"
+        "build": "webpack --config webpack.config.prod.js",
+        "css": "npm-run-all css-compile css-prefix css-minify",
+        "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/prompt.scss -o dist/ --importer node_modules/node-sass-package-importer/dist/cli.js && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/prompt_dark.scss -o dist/ --importer node_modules/node-sass-package-importer/dist/cli.js",
+        "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
+        "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",
+        "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/prompt.min.css dist/prompt.css && cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/prompt_dark.min.css dist/prompt_dark.css",
+        "css-prefix": "postcss --replace \"dist/*.css\" \"!dist/*.min.css\"",
+        "lint": "stylelint \"scss/**/*.scss\"",
+        "dev": "webpack-dev-server --config webpack.config.dev.js"
     },
     "repository": {
         "type": "git",
@@ -32,14 +34,33 @@
         "bootstrap": "^4.4.1"
     },
     "devDependencies": {
-        "autoprefixer": "^9.7.5",
-        "chokidar-cli": "^2.1.0",
+        "@babel/cli": "^7.10.1",
+        "@babel/core": "^7.10.2",
+        "@babel/preset-env": "^7.10.2",
+        "babel-loader": "^8.1.0",
+        "clean-css": "^4.2.3",
         "clean-css-cli": "^4.3.0",
-        "node-sass": "^4.13.1",
-        "node-sass-chokidar": "^1.4.0",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^6.0.1",
+        "css-loader": "^3.5.3",
+        "cssnano": "^4.1.10",
+        "eslint": "^7.1.0",
+        "eslint-config-airbnb-base": "^14.1.0",
+        "eslint-plugin-import": "^2.20.2",
+        "glob": "^7.1.6",
+        "html-webpack-plugin": "^4.3.0",
+        "node-sass": "^4.14.1",
         "node-sass-package-importer": "^5.3.2",
         "npm-run-all": "^4.1.5",
-        "postcss-cli": "^7.1.0",
-        "stylelint": "^13.2.1"
+        "postcss-cli": "^7.1.1",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.2",
+        "style-loader": "^1.2.1",
+        "stylelint": "^13.5.0",
+        "stylelint-config-standard": "^20.0.0",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-merge": "^4.2.2"
     }
 }

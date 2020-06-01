@@ -1,0 +1,30 @@
+.btn {
+  &:focus, &.focus {
+    box-shadow: none;
+  }
+
+  &:active:not(.disabled), &.active:not(.disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn-link {
+  font-weight: $font-weight-bold;
+  color: $link-color;
+  text-decoration: none;
+
+  @include hover() {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: none;
+  }
+
+}

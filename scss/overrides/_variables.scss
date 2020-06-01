@@ -8,6 +8,11 @@ $input-btn-padding-y: .5em !default;
 $input-btn-padding-x: 1.25rem !default;
 
 $border-width: 2px !default;
+$btn-border-width: 0 !default;
+
+$btn-padding-y: .4rem !default;
+$btn-padding-x: .9rem !default;
+$btn-font-weight: bold !default;
 
 $input-btn-padding-y: .375rem;
 $input-btn-padding-x: .75rem;
@@ -23,7 +28,7 @@ $custom-select-feedback-icon-padding-right: add(1rem * .75, (2 * $custom-select-
 $custom-checkbox-indicator-border-radius: .25rem !default;
 
 $box-shadow-sm: 0 .125rem .25rem rgba($main, .075) !default;
-$box-shadow: 0 .5rem 1rem rgba($main, .15) !default;
+$box-shadow: 0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg: 0 1rem 3rem rgba($main, .175) !default;
 
 $component-active-color: $white;
@@ -74,5 +79,5 @@ $thumbnail-box-shadow: 0 1px 2px rgba($main, .075) !default;
 $close-color: $main !default;
 $close-text-shadow: 0 1px 0 $inverted !default;
 
-$code-color: $main-light !default;
+$code-color: #b58c8a !default;
 $kbd-color: $inverted !default;

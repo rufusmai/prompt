@@ -5,10 +5,9 @@
 
         <title>Prompt - CSS Framework based on Bootstrap 4</title>
 
-        <link rel="stylesheet" href="https://rawcdn.githack.com/rufusmaiwald/prompt/v1.3.2/dist/prompt.min.css">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <script src="https://kit.fontawesome.com/b08dd53d95.js" defer></script>
 
-        <script src="https://kit.fontawesome.com/b08dd53d95.js"></script>
         <style>
             .header-wrapper {
                 background: rgba(135, 67, 64, 0.61);
@@ -35,13 +34,14 @@
                             <a href="/components.html" class="p-2 text-light d-inline-block">Components</a>
                         </li>
                         <li class="nav-item d-none d-md-block px-1">
-                            <a href="ts3server://ts.mcone.eu" class="social-iconbar-icon" data-toggle="tooltip" data-trigger="hover" data-placement="bottom"
-                               title="View on Github">
-                                <i class="fab fa-github"></i>
+                            <a class="btn btn-dark social-iconbar-icon d-none d-lg-inline-block mr-2"
+                               href="https://github.com/rufusmaiwald/prompt" target="_blank" data-toggle="tooltip"
+                               data-trigger="hover" data-placement="bottom" title="View on Github">
+                                <i class="fab fa-github fa-lg"></i>
                             </a>
                         </li>
                         <li class="nav-item d-inline-block">
-                            <a id="btn-login" class="btn btn btn-secondary btn-light btn-secondary"
+                            <a id="btn-login" class="btn btn-light"
                                     href="https://github.com/rufusmaiwald/prompt/archive/master.zip" title="">Download
                             </a>
                         </li>
@@ -54,14 +54,14 @@
                 <div class="d-none d-lg-block mr-lg-auto text-center">
                     <h1 class="text-light header-title font-weight-bold">Prompt</h1>
                     <h2>
-                        <small class="text-dark">Just another CSS Framework</small>
+                        <small class="text-main-light">Just another CSS Framework</small>
                     </h2>
                 </div>
                 <div class="mt-5 mt-lg-0 text-center card header-info-card bg-transparent border-0 shadow">
                     <div class="card-body p-4 header-info-card-body text-light">
                         Prompt is a CSS Design Framework based on Bootstrap 4.
                     </div>
-                    <div class="card-footer header-info-card-footer p-4 align-items-start">
+                    <div class="card-footer header-info-card-footer p-4 align-items-start text-dark">
                         Made with <span class="text-danger">&hearts;</span> by <a href="https://rufusmaiwald.de"
                                                                                   target="_blank">Rufus Maiwald</a>
                     </div>
@@ -101,7 +101,7 @@
                                     Use <code style="display: contents">dist/prompt.css</code> as compiled version
                                 </p>
 
-                                <a class="btn btn-outline-secondary"
+                                <a class="btn btn-secondary"
                                    href="https://github.com/rufusmaiwald/prompt/archive/master.zip">Download</a>
                             </div>
                         </div>
@@ -136,9 +136,7 @@
             var btn = document.getElementById('btn-login');
             $(window).scroll(function () {
                 let pixels = window.innerWidth > 767.98 ? 120 : 20;
-
                 window.pageYOffset > pixels ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
-                window.pageYOffset > pixels ? btn.classList.remove('btn-light') : btn.classList.add('btn-light');
             });
         </script>
     </body>
