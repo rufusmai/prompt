@@ -14,5 +14,5 @@ deploy:
   keep-history: true
   local-dir: docs_dist
   on:
-    branch: master
+    tags: true
     node: 'lts/*'
