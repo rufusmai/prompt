@@ -15,8 +15,8 @@
     "homepage": "https://prompt.rufusmaiwald.de/",
     "author": "Rufus Maiwald",
     "scripts": {
-        "build": "webpack --config webpack.config.prod.js",
-        "css": "npm-run-all css-compile css-prefix css-minify",
+        "build-docs": "webpack --config webpack.config.prod.js",
+        "build": "npm-run-all css-compile css-prefix css-minify",
         "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/prompt.scss -o dist/ --importer node_modules/node-sass-package-importer/dist/cli.js && node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/prompt_dark.scss -o dist/ --importer node_modules/node-sass-package-importer/dist/cli.js",
         "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
         "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache",

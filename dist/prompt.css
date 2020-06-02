@@ -181,7 +181,7 @@ a {
 
 a:hover {
   color: #6ab8f7;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]) {
@@ -2815,7 +2815,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-success:hover:not(:disabled):not(.disabled):not(.active):not(:active) {
   background-color: #65bc69;
-  color: #212529;
+  color: #fff;
 }
 
 .btn-outline-success:focus, .btn-outline-success.focus {
@@ -2840,7 +2840,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-info:hover:not(:disabled):not(.disabled):not(.active):not(:active) {
   background-color: #32d4e9;
-  color: #212529;
+  color: #fff;
 }
 
 .btn-outline-info:focus, .btn-outline-info.focus {
@@ -3066,11 +3066,11 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
   color: #6ab8f7;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:focus, .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
   box-shadow: none;
 }
 

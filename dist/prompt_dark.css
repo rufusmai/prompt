@@ -181,7 +181,7 @@ a {
 
 a:hover {
   color: #63aced;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 a:not([href]) {
@@ -3066,11 +3066,11 @@ fieldset:disabled a.btn {
 
 .btn-link:hover {
   color: #63aced;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .btn-link:focus, .btn-link.focus {
-  text-decoration: underline;
+  text-decoration: none;
   box-shadow: none;
 }
 

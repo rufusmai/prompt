@@ -71,7 +71,7 @@
 
   &:hover:not(:disabled):not(.disabled):not(.active):not(:active) {
     background-color: $hover-background;
-    color: color-yiq($hover-background);
+    color: color-yiq($background-variant);
   }
 
   &:focus,
